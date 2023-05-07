@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Car Rental System</title>
+        <link href="pstyles.css" rel="stylesheet" type="text/css" />
+     
+    </head>
+		<body>
+			<div class="logoBackground">
+		<div class="logo"><h6>BOOKINGS<h6></div>
+		
+	  </div>
+			<div class="menu">
+		<ul>
+			<li><a href="customerHome.html">Home</a></li>
+			<li id="active"><a href="">Book Car</a></li>
+			<li><a href="return.html">Return Car</a></li>
+			<li><a href="index.html">Logout</a></li>
+
+		</ul>
+	  </div>
+	<div id="adminText">
+	   <div class="leftContent">
+		<b><form action="checkAvailable.php" method="post" >
+			<h1>CHECK AVAILABILITY</h1><br><br>
+	Enter Customer ID: <input type="text" name="cbid"/><br><br>
+	Enter Car Name: <input type="text" name="carName"/><br><br>
+	Select Car Type: <select name = "Ctype">
+	<option>Compact</option>
+	<option>Medium</option>
+	<option>Large</option>
+	<option>SUV</option>
+	<option>Van</option>
+	<option>Truck</option>
+	</select><br><br>
+	<input type="submit" name="check" value="Check Availability"><br><br>
+	</form></b>	
+	
+		<b><form action="bookCar.php" method="post" >
+			<h1>BOOK A CAR</h1><br><br>
+	Enter Customer ID: <input type="text" name="cbid"/><br><br>
+	Enter Pick Up date yyyy-mm-dd: <input type="text" name="PickUpDate"/><br><br>
+	Enter Payment date yyyy-mm-dd: <input type="text" name="PaymentDate"/><br><br>
+	Enter Return date yyyy-mm-dd: <input type="text" name="ReturnDate"/><br><br>
+	No of days: <input type="text" name="Days"/><br><br>
+	Enter Plate id: <input type="text" name="Plateid"/><br><br>
+	<input type="submit" name="book" value="Book">
+	</form></b>	
+
+	<br>
+		</div>					
+	</div>					
+	</body>
+</html>

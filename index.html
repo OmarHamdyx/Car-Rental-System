@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Car Rental System</title>
+			<link href="istyles.css" rel="stylesheet" type="text/css" />
+		
+				<script>
+				function validateAdminForm() {
+					var x = document.forms["admin"]["adminEmail"].value;
+					var y = document.forms["admin"]["adminPass"].value;
+					if (x == "" || y == "") {
+					alert("Both Email and Password must be filled out");
+					return false;
+		  }
+		}
+		
+		function validateCustomerForm() {					
+					var l = document.forms["customer"]["email"].value;
+					var m = document.forms["customer"]["pass"].value;
+					if (l == "" || m == "") {
+					alert("Both Email and Password must be filled out");
+					return false;
+		  }
+		}
+				</script>
+		
+    </head>
+    <body>        
+			  <div id="container"> 
+				<br class="clearfloat"/>
+			  <div id="header">
+		  <div class="logoBackground">
+			<div class="logo">CAR RENTAL SYSTEM</div>
+		  </div>
+		  <div id="adminText">
+		  <div>
+		  
+	<form name="admin" action="indexAdmin.php" onsubmit="return validateAdminForm()" method="post" required>
+		<h1>Admin Login</h1>
+		E-mail: <input type="text" name="adminEmail" placeholder="Your E-mail..."> <br>
+		Password: <input type="password" name="adminPass" placeholder="Your Password..."> <br>
+		<input type="submit" value="Login"><br><br>
+	</form>
+		</div>
+		  
+		  <div>
+	<form name="customer" action="indexCustomer.php" onsubmit="return validateCustomerForm()" method="post" required>
+		<h1>Customer Login</h1>
+		E-mail: <input type="text" name="email" placeholder="Your E-mail..."> <br>
+		Password: <input type="password" name="pass" placeholder="Your Password..."> <br>
+		<input type="submit" value="Login"> <br><br>
+	</form>
+
+	<form action="signUpCustomer.html" method="post">
+	    <h1>Customer Registration</h1>
+		<input type="submit" value="SignUp">
+	</form>
+		</div>
+		  </div>
+		  
+		  </div>
+			<br class="clearfloat" />
+		  <div id="footer">
+			</div>
+		  </div>
+		</div>
+	</body>
+</html>

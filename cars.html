@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Car Rental System</title>
+        <link href="pstyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+		<div class="logoBackground">
+  	<div class="logo"><h6>CARS<h6></div>
+  </div>
+		<div class="menu">
+  	<ul>
+    	<li><a href="adminHome.html">Home</a></li>
+        <li><a href="adminCustomer.html">Customers</a></li>
+        <li id="active"><a href="">Cars</a></li>
+	    <li><a href="adminReservation.html">Reservations</a></li>
+		<li><a href="report.html">Report</a></li>
+		<li><a href="index.html">Logout</a></li>
+    </ul>
+  </div>
+	   <div id="adminText">
+		<div class="leftContent">
+			<b><form action="registercar.php" method="post" >
+			<h1>ADD CAR</h1>
+		License No: <input type="text" name="lno"/><br><br>
+		Car Name: <input type="text" name="carName"/><br><br>
+		Year: <input type="text" name="year"/><br><br>
+		Plate ID: <input type="text" name="plateId"/><br><br>
+		Daily Rate: <input type="text" name="dailyRate"/><br><br> 
+		Office City: <input type="text" name="officeCity"/><br><br>
+		Car type: <select name = "Cartype">
+		<option>Compact</option>
+		<option>Medium</option>
+		<option>Large</option>
+		<option>SUV</option>
+		<option>Van</option>
+		<option>Truck</option>
+		</select><br><br>
+		Car status: <select name = "Carstatus">
+		<option>active</option>
+		<option>out of service</option>
+		<option>rented</option>
+		<option>in repair</option>
+		</select><br><br>
+		<input type="submit" name="submit" value="Register">
+		</form></b>	
+			</div>	
+			
+			
+			<div class="rightContent">
+			<h1>VIEW CARS & RATES</h1>
+			<form action="viewcar.php" method="post">
+			Select Car type to view: <select name="Ctype">
+		<option>Compact</option>
+		<option>Medium</option>
+		<option>Large</option>
+		<option>SUV</option>
+		<option>Van</option>
+		<option>Truck</option>
+		</select>
+		<input type="submit" name="submit1" value="View">
+		</form>
+
+		<br><br><br><br>
+
+		<h1>UPDATE RENTAL RATES</h1>
+		<form action="update.php" method="post">
+		Select Car type to update: <select name = "Ctype">
+		<option>Compact</option>
+		<option>Medium</option>
+		<option>Large</option>
+		<option>SUV</option>
+		<option>Van</option>
+		<option>Truck</option>
+		</select><br><br>
+		Daily Rate: <input type="text" name="udrate"/><br><br>
+		<input type="submit" name="submit1" value="Update">
+		</form>
+			</div>
+      </div>
+		</body>
+</html>
